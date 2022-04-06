@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="rohit">
+      <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio eveniet
+        temporibus deserunt necessitatibus qui blanditiis dolorum in aut iusto
+        tempore at laudantium obcaecati, aperiam sapiente ex, accusamus hic
+        vitae nesciunt.
+      </h1>
+    </div>
+    <button onclick="rohit()">Click me</button>
+
+    <script>
+      function fun() {}
+      function rohit() {
+       var x =  document.getElementById("rohit").style.display="none";
+       // alert(x.toString());
+       if(style.display=="none")
+       {
+            var x =  document.getElementById("rohit").style.display="block";
+
+        }
+        //let y =String(x.value);
+        alert(x);
+        //alert(y);
+        console.log(x);
+        //console.log(x);
+        Person("Rohit kumar");
+      }
+
+      function Person(name) {
+  this.name = name;
+  this.say = function() {
+    console.log(this.name);
+  };
+}
+
+function DecoratedPerson(person, street, city) {
+  this.person = person;
+  this.person = person.name;
+  this.street = street;
+  this.city = city;
+  this.say = function() {
+    console.log(this.name, this.street, this.city);
+  };
+}
+    </script>
+  </body>
+</html>

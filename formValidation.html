@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #valid{
+            color: red;
+            text-align: center;
+            display: none;
+        }
+    </style>
+  </head>
+  <body>
+    <form name="form">
+      <label for="firstname">FIRSTNAME</label>
+      <input type="text" name="firstname" id="firstname" />
+    <span id="firstNameValid"></span>
+     
+    </form>
+    <input type="submit" value="submit"  onclick="validation()" />
+     <p><span id="valid">***Please Enter Valid Name***</span></p> 
+    <script>
+      function validation() {
+        let x = document.forms["form"]["firstname"].value;
+        //let x = document.getElementById('firstname').value;
+        if (x=="") {
+          var r =document.getElementById("valid").style.display = "block";
+           // document.getElementById('firstNameValid').innerHTML="***Please Enter Valid Name***";
+        //  alert(r);
+        } 
+         else {
+          alert(x);
+        }
+      }
+    </script>
+  </body>
+</html>
