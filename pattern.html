@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="text" id="text">
+    <button onclick="pattern()">UpDown pattern</button>
+    <button onclick="reversePattern()">reversePattern</button>
+    <button onclick="diamomdPatern()">diamomdPatern</button>
+    <script>
+        function pattern(){
+            var getValue =document.getElementById("text").value;
+            for(i=1;i<=getValue;i++){
+                for(j=1;j<=i;j++){
+                    document.write(j);
+                }
+                document.write("<br>")
+            }
+        }
+        function reversePattern(){
+            var getValue =document.getElementById("text").value;
+
+            for(i=getValue;i>=0;i--){
+                for(j=1;j<=i;j++){
+                    document.write(j);
+                }
+                document.write("<br>");
+            }
+        }
+        function diamomdPatern(){
+            var getValue =document.getElementById("text").value;
+            for(i=1;i<=getValue;i++){
+                for(j=1;j<=i;j++){
+                    document.write(j);
+                }
+                document.write("<br>")
+                k=getValue-1;
+            } for(i=k;i>=0;i--){
+                for(j=1;j<=i;j++){
+                    document.write(j);
+                }
+                document.write("<br>");
+            }
+
+        }
+    </script>
+</body>
+</html>
