@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+      header {
+        max-width: 70%;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conatiner">
+      <header>
+        <div class="row">
+          <div class="col-lg-12 py-3">
+            <div class="mb-3">
+              <label for="textbox" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control text-end"
+                placeholder="0"
+                id="textbox"
+              />
+            </div>
+          </div>
+          <div class="row mx-5">
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="+"
+                onclick="display('+')"
+                class="btn btn-outline-primary"
+              >
+                +
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="-"
+                onclick="display('-')"
+                class="btn btn-outline-dark"
+              >
+                -
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="*"
+                onclick="display('*')"
+                class="btn btn-outline-danger"
+              >
+                *
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="/"
+                onclick="display('/')"
+                class="btn btn-outline-info"
+              >
+                /
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="1"
+                onclick="display('1')"
+                class="btn btn-outline-secondary"
+              >
+                1
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="2"
+                onclick="display('2')"
+                class="btn btn-outline-secondary"
+              >
+                2
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="3"
+                onclick="display(3)"
+                class="btn btn-outline-secondary"
+              >
+                3
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="4"
+                onclick="display(4)"
+                class="btn btn-outline-secondary"
+              >
+                4
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="5"
+                onclick="display(5)"
+                class="btn btn-outline-secondary"
+              >
+                5
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="6"
+                onclick="display(6)"
+                class="btn btn-outline-secondary"
+              >
+                6
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="7"
+                onclick="display('7')"
+                class="btn btn-outline-secondary"
+              >
+                7
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="8"
+                onclick="display('8')"
+                class="btn btn-outline-secondary"
+              >
+                8
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="9"
+                onclick="display('9')"
+                class="btn btn-outline-secondary"
+              >
+                9
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="0"
+                onclick="display('0')"
+                class="btn btn-outline-secondary"
+              >
+                0
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="="
+                onclick="solv()"
+                class="btn btn-outline-warning"
+              >
+                =
+              </button>
+            </div>
+            <div class="col-lg-3 py-3">
+              <button
+                type="button"
+                value="."
+               
+                class="btn btn-outline-secondary  "
+              >
+                .
+              </button>
+            
+          </div>
+          <div class="offset-sm-5 col-lg-3  py-3">
+            <button
+              type="button"
+              value="clear"
+              onclick="clearAll()"
+              class="btn btn-outline-warning"
+            >
+              clear
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <script>
+      // function display(val){
+      //   var pre = val;
+      //   var after=val;
+
+      //   // return val;
+      //   // document.getElementById("textbox").innerHTML=val;
+      // }
+      // function solu(){
+
+      // }
+      function clearAll() {
+        output.value = "0";
+      }
+
+      let output = document.getElementById("textbox");
+
+      function display(num) {
+        output.value += num;
+      }
+      function solv() {
+        var x = document.getElementById("textbox").value;
+        var y = eval(x);
+        // alert(y);
+        document.getElementById("textbox").value = y;
+      }
+    </script>
+  </body>
+</html>

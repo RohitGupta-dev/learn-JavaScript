@@ -18,39 +18,32 @@
     <button onclick="rohit()">Click me</button>
 
     <script>
-      function fun() {}
       function rohit() {
-       var x =  document.getElementById("rohit").style.display="none";
-       // alert(x.toString());
-       if(style.display=="none")
-       {
-            var x =  document.getElementById("rohit").style.display="block";
-
+        var custDiv = document.getElementById("rohit");
+        if (custDiv.style.display === "none") {
+          custDiv.style.display = "block";
+        } else {
+          custDiv.style.display = "none";
         }
-        //let y =String(x.value);
-        alert(x);
-        //alert(y);
-        console.log(x);
-        //console.log(x);
-        Person("Rohit kumar");
       }
+    
 
       function Person(name) {
-  this.name = name;
-  this.say = function() {
-    console.log(this.name);
-  };
-}
+        this.name = name;
+        this.say = function () {
+          console.log(this.name);
+        };
+      }
 
-function DecoratedPerson(person, street, city) {
-  this.person = person;
-  this.person = person.name;
-  this.street = street;
-  this.city = city;
-  this.say = function() {
-    console.log(this.name, this.street, this.city);
-  };
-}
+      function DecoratedPerson(person, street, city) {
+        this.person = person;
+        this.person = person.name;
+        this.street = street;
+        this.city = city;
+        this.say = function () {
+          console.log(this.name, this.street, this.city);
+        };
+      }
     </script>
   </body>
 </html>
