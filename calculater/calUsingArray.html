@@ -139,22 +139,21 @@
         function display(num) {
             console.log(num.value);
             arr.push(num.value);
-            console.log(arr);
+            // console.log(arr);
 
             output.value += num.value;
         }
         function solv() {
             var n = arr.length;
+            let min,max,ans;
+            
             let pre, post, opet;
             var asn = 0;
             pre = arr[0];
             opet = arr[1];
             post = arr[2];
             pre = parseInt(pre);
-            if(opet=="."){
-                pre = arr[0]+arr[1]
-                post = arr[3]+arr[4]
-            }
+            
             post = parseInt(post)
             //   alert(opet);
 

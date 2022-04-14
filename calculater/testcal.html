@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        header {
+            max-width: 70%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatiner">
+        <header>
+            <div class="row">
+                <div class="col-lg-12 py-3">
+                    <h3 class="text-center text-warning">Array using calculater</h3>
+                    <div class="mb-3">
+                        <label for="textbox" class="form-label"></label>
+                        <input type="text" class="form-control text-end" placeholder="0" id="textbox" />
+                    </div>
+                </div>
+                <div class="row mx-5">
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="+" onclick="display(this)" class="btn btn-outline-primary">
+                            +
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="-" onclick="display(this)" class="btn btn-outline-dark">
+                            -
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="*" onclick="display(this)" class="btn btn-outline-danger">
+                            *
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="/" onclick="display(this)" class="btn btn-outline-info">
+                            /
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="1" onclick="display(this)" class="btn btn-outline-secondary">
+                            1
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="2" onclick="display(this)" class="btn btn-outline-secondary">
+                            2
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="3" onclick="display(this)" class="btn btn-outline-secondary">
+                            3
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="4" onclick="display(this)" class="btn btn-outline-secondary">
+                            4
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="5" onclick="display(this)" class="btn btn-outline-secondary">
+                            5
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="6" onclick="display(this)" class="btn btn-outline-secondary">
+                            6
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="7" onclick="display(this)" class="btn btn-outline-secondary">
+                            7
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="8" onclick="display(this)" class="btn btn-outline-secondary">
+                            8
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="9" onclick="display(this)" class="btn btn-outline-secondary">
+                            9
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="0" onclick="display(this)" class="btn btn-outline-secondary">
+                            0
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="=" onclick="solv()" class="btn btn-outline-warning">
+                            =
+                        </button>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <button type="button" value="." onclick="display(this)" class="btn btn-outline-secondary  ">
+                            .
+                        </button>
+
+                    </div>
+                    <div class="offset-sm-5 col-lg-3  py-3">
+                        <button type="button" value="clear" onclick="clearAll()" class="btn btn-outline-warning">
+                            clear
+                        </button>
+                    </div>
+                </div>
+        </header>
+    </div>
+
+    <script>
+        // function display(val){
+        //   var pre = val;
+        //   var after=val;
+
+        //   // return val;
+        //   // document.getElementById("textbox").innerHTML=val;
+        // }
+        // function solu(){
+
+        // }
+        var arr = [];
+        let output = document.getElementById("textbox");
+        function clearAll() {
+            output.value = "0";
+        }
+
+
+        function display(num) {
+            console.log(num.value);
+            arr.push(num.value);
+            console.log(arr);
+
+            output.value += num.value;
+        }
+        function solv() {
+            var operator=[];
+            var operatorPostion=[];
+            var n = arr.length;
+            let min,max,ans;
+            var NUM;
+            for(i=0;i<n;i++){
+                if(arr[i]=="+"||arr[i]=="-"||arr[i]=="*"||arr[i]=="/"){
+                alert(arr[i] + " positon is   "+ i);
+                operator.push(i);
+                operatorPostion.push(arr[i]);
+                }
+            }
+            for (let j = 0; j < operator.length; j++) {
+            //     operator[j-1] = min;
+            var a = operator[j];
+            console.log(" a is this  " +  a);
+            pree= arr[a-1];
+            parseInt(pree);
+            console.log(" min operator  " + arr[a-1] );
+           poost= arr[a+1];
+           parseInt(poost);
+            console.log(" max operator  " + arr[a+1] );
+            console.log(" {operatorPostion[a]" + operatorPostion[a] );
+            console.log(" Result  " );
+            console.log(  NUM+=`${pree} ${operatorPostion[a]} ${poost}` );
+            //     operator[j+1]= max;
+            //    console.log("min value is " + min);
+            //    console.log("max value is " + max);
+            //    ans= `${min}${operator[j]}${max}`;
+            //    console.log("ans  "+ ans);
+            }
+            console.log(operator);
+            console.log(operatorPostion);
+            let pre, post, opet;
+            var asn = 0;
+            pre = arr[0];
+            opet = arr[1];
+            post = arr[2];
+            pre = parseInt(pre);
+            if(opet=="."){
+                pre = arr[0]+arr[1]
+                post = arr[3]+arr[4]
+            }
+            post = parseInt(post)
+            //   alert(opet);
+
+            switch (opet) {
+                case "+":
+                    console.log(pre + post);
+                    asn = pre + post;
+                    //    console.log(parseInt(pre) + parseInt(post));
+                    break;
+                case "-":
+                    console.log(pre - post);
+                    asn = pre - post;
+                    break;
+                case "*":
+                    console.log(pre * post);
+                    asn = pre * post;
+                    break;
+                case "/":
+                    console.log(pre / post);
+                    asn = pre / post;
+                    break;
+                case "%":
+                    console.log(pre % post);
+                    asn = pre % post;
+                    break;
+                default:
+                    break;
+            }
+            //    output.value= asn;
+            if (asn != 0) {
+                output.value = asn;
+            }
+            else {
+                output.value = "0";
+
+            }
+            arr = [];
+            // var x = document.getElementById("textbox").value;
+            // var y = eval(x);
+            // // alert(y);
+            // document.getElementById("textbox").value = y;
+        }
+    </script>
+</body>
+
+</html>
