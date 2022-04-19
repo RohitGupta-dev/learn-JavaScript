@@ -1,0 +1,39 @@
+<!-- create array and multiple even number -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="inputData" />
+    <button type="button" onclick="addArray()">submit</button>
+    <button type="button" onclick="evenArray()">even*2</button>
+    <script>
+      var arr = new Array();
+      function addArray() {
+        var a = document.getElementById("inputData").value;
+        // alert(a);
+        arr.push(a);
+        // console.log(arr);
+
+        console.log(arr);
+      }
+
+      function evenArray() {
+        arr.forEach(evenMultiple);
+        function evenMultiple(value, index, arr) {
+            console.log(arr[index]);
+          if (arr[index] % 2 == 0) {
+            arr[index] = arr[index] * 2;
+          } else {
+              console.log(arr);
+        }
+          console.log(arr);
+        }
+      }
+    </script>
+  </body>
+</html>

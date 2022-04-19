@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+  #data1{
+        background-color: aquamarine;
+        padding: 20px;
+        width: 50%;
+        margin: 10px auto;
+    }
+</style>
+</head>
+<body>
+    <!-- <input type="text" name="inputText" id="inputText"> -->
+    <button type="button" onclick="AddToArray()">Add To Array Using Push </button>
+    <button type="button" onclick="AddToFrontIndexArray()">Add To Front Index Array Using Push </button>
+    <button type="button" onclick="deleteElementUsingPOp()">delete Element Using POp  </button>
+    <button type="button" onclick="removeFirstElement()">remove First Element </button>
+
+    <div id="data">
+
+    </div>
+    <div id="data1">
+
+    </div>
+    <script>
+        var data= new Array();
+        function AddToArray() {
+            var a = prompt("ENTER NUMBER TO INSERT INTO ARRAY");
+          
+            console.log(a);
+           data.push(a);
+        // console.log(data);
+        document.getElementById("data1").innerHTML=data;
+        }
+        function AddToFrontIndexArray() {
+            var a = prompt("ENTER NUMBER TO INSERT INTO ARRAY");
+          
+          console.log(a);
+         data.unshift(a);
+      // console.log(data);
+      document.getElementById("data1").innerHTML=data;
+        }
+        function removeFirstElement(){
+            data.shift();
+            document.getElementById("data1").innerHTML=data;
+
+            console.log(data);
+        }
+        function deleteElementUsingPOp() {
+            data.pop();
+            document.getElementById("data1").innerHTML=data;
+    
+            console.log(data);
+        }
+    </script>
+</body>
+</html>
