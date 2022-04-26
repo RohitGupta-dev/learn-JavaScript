@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+
+<body>
+
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+
+    <br>
+<P id="question"></P>
+
+<br>
+<button value="a" onclick="insert(this)">A</button>
+<br>
+<button value="b" onclick="insert(this)">B</button>
+<br>
+<button value="c" onclick="insert(this)">C</button>
+<br>
+
+    <button onclick="result()">Show Result</button>
+
+
+    <script>
+
+var currIndex=0;
+            var q=['quest a ','quest 2 ','quest 3 ' ];
+            var ans=['a','c','b'];
+            var inp=[];
+         
+            showquestion();
+       
+function insert(element)            
+{
+    inp[currIndex]=element.value;
+
+    console.log(inp)
+}
+function showquestion(){
+    document.getElementById("question").innerHTML=q[currIndex];
+}            
+function prev()
+{
+    if(currIndex >0 )
+    {
+    currIndex--
+    showquestion();
+    }
+}
+
+function next()
+{
+    if(currIndex < q.length-1 )
+    {
+        currIndex++
+        showquestion();
+    }
+}
+
+function result()
+{
+    var score=0;
+    for(var i=0; i< q.length; i++ )
+    {
+        if(ans[i] == inp[i])
+            score++;
+    }
+    console.log("your score is " + score)
+
+}
+
+        </script>
+
+
+</body>
+
+</html>

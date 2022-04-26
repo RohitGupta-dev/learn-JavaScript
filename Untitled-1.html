@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        num=6;
+        row=6;
+        for (let i = 0; i <= num; i++) {
+            for (let j = 1; j < i; j++) {
+                console.log(j)
+                document.write(j);            
+            }
+            for (let n = 1; n < i; n++) {
+                console.log(n)
+                document.write("n");            
+            }
+            // console.log(i);
+           
+            // for (let n =5; n >= 1; n--) {
+            //     for (let j = 1; j < i; j++) {
+            // //    document.write("n");
+                
+                
+            //     document.write(j);            
+            // }
+        // }
+           
+            document.write("<br>")            
+        }
+        document.write("<br>")            
+        document.write("<br>")            
+        for(i=1;i<=row;i++)
+    {
+
+        for(j=1;j<=i;j++)
+        {   
+            document.write(j);
+        }
+
+        for(j=i-1;j>=1;j--)
+        {
+            document.write(j);
+        }
+        document.write("<br>")            
+
+    }
+    </script>
+</body>
+</html>

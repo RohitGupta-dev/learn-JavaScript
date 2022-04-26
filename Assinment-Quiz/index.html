@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        min-width: 100%;
+        background-color: black;
+        color: white;
+        position: absolute;
+      }
+      .leftbutton {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -12px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      .rightbutton {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: auto;
+        padding: 16px;
+        margin-top: -12px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Quiz</h1>
+      <div class="quiz">
+          <h1 id="que"> </h1>
+          <label for="keyAns1"></label>
+          <input type="radio" name="ans" id="keyAns1"  ><br>
+          <label for="keyAns2"></label>
+          <input type="radio" name="ans" id="keyAns2"  ><br>
+          <label for="keyAns3"></label>
+          
+          <input type="radio" name="ans" id="keyAns3"  ><br>
+          <label for="keyAns4"></label>
+          <input type="radio" name="ans" id="keyAns4"  ><br>
+      </div>
+    </div>
+    <div class="leftbutton">
+      <button onclick="pre(-1)" type="button"><</button>
+    </div>
+    <div class="rightbutton">
+      <button onclick="pre(1)" type="button">></button>
+    </div>
+    
+    <script src="index.js"></script>
+    <script>
+        arr=[];
+        var slider = [
+        ["what is Your Name", "Rohit", "Rajan", "rohan", "rajat"],
+        ["what is Your Name", "Rohit", "Rajan", "rohan", "rajat"],
+        ["what is Your Name", "Rohit", "Rajan", "rohan", "rajat"],
+      ];
+       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* #hide {
+            display: none;
+        } */
+    </style>
+  </head>
+
+  <body>
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" id="subject" /><br /><br />
+    <div id="hide">
+      <label for="que">Question</label>
+      <input type="text" name="que" id="que" /><br /><br />
+      <label for="ans">Answer</label>
+      <input type="text" name="ans" id="ans" /><br /><br />
+    </div>
+    <br />
+    <button onclick="quiz()">START</button>
+
+    <script>
+      var subject = new Object();
+      var question = new Object();
+      var Ans = new Object();
+      var cnt = 0;
+      function quiz() {
+        var subject = document.getElementById("subject").value;
+
+        do {
+          document.getElementById("subject").value = subject;
+          question[cnt] = document.getElementById("que").value;
+          Ans[cnt] = document.getElementById("ans").value;
+          question[cnt] = document.getElementById("que").value = "";
+          Ans[cnt] = document.getElementById("ans").value = "";
+          cnt++;
+          var i = confirm("you want to select more question");
+          show();
+        } while (i == true);
+        function show() {
+          console.log(subject);
+          console.log(question);
+          console.log(Ans);
+        }
+    }
+    function insert() {
+      const myObj = {
+       
+        math: [
+          { question: "what is your name", options: ["a", "b","c","d"] },
+          { question: "what is your name", options: ["a", "b","c","d"] },
+          { question: "what is your name", options: ["a", "b","c","d"] },
+        ],
+        mathAnswer:[ 
+            {
+                answer:"a",
+                answer:"a",
+                answer:"a",
+                answer:"a"
+
+            }
+        ]
+      };
+      console.log(myObj); 
+
+      var obj=new Object()
+
+
+// }
+      // else{
+      //     console.log("not working yet");
+      // }
+    }
+      insert();
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="subject" id="subject">
+    <input type="text" name="question" id="question">
+    <input type="text" name="answer" id="answer">
+    <input type="submit" onclick="push()">
+    <button type="button" onclick="pushAllArray()">multiple</button>
+<script>
+    var que=[];
+    var ans=[];
+    var subject=[];
+    var multiple=[];
+    var newArray=[];
+    var cnt=0;
+    function push() {
+      
+            
+            subject[cnt]=document.getElementById("subject").value;
+            que[cnt]=document.getElementById("question").value;
+            ans[cnt]=document.getElementById("answer").value;
+            cnt++;
+            newArray.push(subject)
+            newArray.push(que)
+            newArray.push(ans)
+
+        console.log(newArray);
+        console.log(que);
+        console.log(ans);
+        // console.log(que);
+        }
+
+        function pushAllArray() {
+            // for (let i = 0; i < que.length; i++) {
+            //    multiple.push(subject[i])
+            //    multiple.push(que[i])
+            //    multiple.push(ans[i])
+            // }
+            // multiple.push(ans[i])
+            multiple.push(newArray);
+            console.log(multiple);
+        }
+</script>
+
+</body>
+</html>
