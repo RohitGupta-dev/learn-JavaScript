@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <input type="text" name="subject" id="subject">
-    <input type="text" name="question" id="question">
-    <input type="text" name="answer" id="answer">
-    <input type="submit" onclick="push()">
+  </head>
+  <body>
+    <input type="text" name="subject" id="subject" placeholder="subject" />
+    <input type="text" name="question" id="question" placeholder="question" />
+    <input type="text" name="answer" id="answer" placeholder="answer" />
+    <input type="submit" onclick="push()" />
+    <button type="button" onclick="NEXTQUESTION()">NEXTQUESTION</button>
     <button type="button" onclick="pushAllArray()">multiple</button>
-<script>
-    var que=[];
-    var ans=[];
-    var subject=[];
-    var multiple=[];
-    var newArray=[];
-    var cnt=0;
-    function push() {
-      
-            
-            subject[cnt]=document.getElementById("subject").value;
-            que[cnt]=document.getElementById("question").value;
-            ans[cnt]=document.getElementById("answer").value;
-            cnt++;
-            newArray.push(subject)
-            newArray.push(que)
-            newArray.push(ans)
-
-        console.log(newArray);
+    <script>
+      var que = [];
+      var ans = [];
+      var subject = [];
+      var newArray = [];
+      var cnt = 0;
+      function push() {
+        subject[cnt] = document.getElementById("subject").value;
+        que[cnt] = document.getElementById("question").value;
+        ans[cnt] = document.getElementById("answer").value;
+        cnt++;
+        console.log(subject);
+        // document.getElementById("subject").value = subject[cnt];
         console.log(que);
+        // document.getElementById("question").value = "";
         console.log(ans);
-        // console.log(que);
-        }
+        // document.getElementById("answer").value = "";
 
-        function pushAllArray() {
-            // for (let i = 0; i < que.length; i++) {
-            //    multiple.push(subject[i])
-            //    multiple.push(que[i])
-            //    multiple.push(ans[i])
-            // }
-            // multiple.push(ans[i])
-            multiple.push(newArray);
-            console.log(multiple);
-        }
-</script>
+      }
+      function NEXTQUESTION() {
+        document.getElementById("subject").value = subject[cnt];
 
-</body>
+        que[cnt] = document.getElementById("question").value;
+        ans[cnt] = document.getElementById("answer").value;
+        cnt++;
+      }
+
+      function pushAllArray() {
+       
+        newArray.push(subject,que,ans);
+        console.log(newArray);
+        // var que = [];
+        // var ans = [];
+        // var subject = [];
+        // var cnt = 0;
+
+        // multiple.push(newArray);}
+        // console.log(multiple)
+
+        // function fun() {
+        //   multiple.push(newArray);
+        // }
+        // console.log(multiple);
+      }
+    </script>
+  </body>
 </html>

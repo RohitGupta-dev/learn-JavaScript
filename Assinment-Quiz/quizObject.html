@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="subject" id="subject" />
+    <input type="text" name="que" id="que" />
+    <input type="text" name="ans" id="ans" />
+    <input type="submit" onclick="submit()" />
+
+    <script>
+      var rohit = new Object();
+    //   rohit.eng = new Array();
+
+    //   rohit.eng.que = new Object();
+    //   rohit.eng.ans = new Object();
+
+      console.log(rohit);
+
+      function submit() {
+        var sub = document.getElementById("subject").value;
+        var que = document.getElementById("que").value;
+        var Ans = document.getElementById("ans").value;
+
+        rohit.sub = new Array();
+        rohit.sub.que = new Object();
+        rohit.sub.ans = new Object();
+
+        rohit.sub.que=new Array();
+        rohit.sub.ans=new Array();
+        // rohit.sub.que.push(Ans)
+        rohit.sub.que.push(que);
+        rohit.sub.ans.push(Ans);
+        console.log(rohit);
+      }
+    </script>
+  </body>
+</html>

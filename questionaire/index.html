@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionaire</title>
+</head>
+<body>
+
+    <div id="user_insertion">
+
+        <input type="subject" name="" id="subject" placeholder="Enter subject">
+        <br><br>
+        <input type="text" id="question" placeholder="Enter Questions">
+        <br><br>
+        <input type="text" id="answer" placeholder="Enter correct Answer">
+        <br><br>
+            
+        <button id="next_question" type="" onclick="next_question()">next question</button> <br> <br>
+        <button id="next_subject" type="submit" onclick="next_subject()">Next subject</button>
+        <button id="insert" type="submit" onclick="insert()">save</button>
+        <button onclick="qshow()">Start quiz</button>
+        <!-- <button onclick="show()">show</button> -->
+
+            
+    </div>
+        <div id="qshw">
+            <button id="prev" onclick="prev()">Prev</button>
+            <button id="next" onclick="next()">next</button>
+            
+            <p id="quiz_question"></p>
+            <p id="ansop">Your answer is: </p>
+            <button id="input" value="a" onclick="input(this)">A</button>
+            <button id="input" value="b" onclick="input(this)">B</button>
+            <button id="input" value="c" onclick="input(this)">C</button>
+            <button id="input" value="d" onclick="input(this)">D</button> <br>
+            <button id="Result" onclick="result()">result</button>
+            
+        </div>      
+        
+        <script src="script.js"></script>
+</body>
+</html>
+
+
