@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="Subject"
+      id="Subject"
+      placeholder="Enter Subject"
+    />
+    <input
+      type="text"
+      name="Question"
+      id="Question"
+      placeholder="Enter Question"
+    />
+    
+    <input type="text" name="Answer" id="Answer" placeholder="Enter Answer" />
+    <button type="button" onclick="AddToArray()">Submit</button>
+    <button type="button" onclick="AddNextSubject()">nextSubject</button>
+    <button type="button" onclick="endTest()">endTest</button>
+   
+    <script>
+      var Subject = [];
+      var Question = [];
+      var Answer = [];
+      var counter = 0;
+      var sub_count = 0;
+      var Main = [];
+      function AddToArray() {
+        var sub, que, ans;
+        sub = document.getElementById("Subject").value;
+        que = document.getElementById("Question").value;
+        ans = document.getElementById("Answer").value;
+        if (counter == 0) {
+          Subject.push(sub);
+          Question.push(que);
+          Answer.push(ans);
+          document.getElementById("Subject").disabled=true;
+          counter++;
+        } else {
+          if (Subject[sub_count] != "") {
+            document.getElementById("Subject").disabled=true;
+
+              console.log(Main);
+           Main[sub_count][1].push(que);
+           Main[sub_count][2].push(ans);                
+          }
+        }
+        i=confirm("YOU WANT TO Add New Subject  ")
+        if(i==true){
+            document.getElementById("Subject").disabled=false;
+            console.log("true");
+           Main.push([Subject, Question, Answer]);
+           console.log(Main);   
+           Subject = [];
+           Question = [];
+           Answer = [];
+        }
+      }
+     
+      function AddNextSubject() {
+        sub_count++;
+        counter = 0;
+        
+      }
+     
+    </script>
+  </body>
+</html>

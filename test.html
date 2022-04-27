@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="subject"
+      id="subject"
+      placeholder="Enter Subject" 
+    />
+    <input
+      type="text"
+      name="question"
+      id="question"
+      placeholder="Enter question" 
+    />
+    <input type="text" name="answer" id="answer" placeholder="Enter answer" 
+   />
+
+    <input type="submit" name="submit" onclick="submit()" value="Submit" />
+    <input
+      type="submit"
+      name="submit"
+      onclick="mainmarge()"
+      value="mainmarge"
+    />
+    
+
+    <script>
+      var main = [];
+      var subject = [];
+      var question = [];
+      var answer = [];
+      var main = [];
+      var cnt = 0;  
+      var i;
+      function submit() {
+        do {
+          insert();
+          dataClear();
+          console.log(main)
+          break;
+
+          if (i == "y") {
+            dataClear();
+            break;
+          }
+        } while (i == true);
+        // subject.push(question);
+        // subject.push(answer);
+        // main.push(subject);
+
+        console.log(subject);
+        console.log(question);
+        console.log(answer);
+      }
+      function insert() {
+        if(document.getElementById("subject").value!=""){
+        subject[cnt] = document.getElementById("subject").value;
+        question[cnt] = document.getElementById("question").value;
+        answer[cnt] = document.getElementById("answer").value;
+        document.getElementById("subject").disabled=true;
+
+        dataClear()
+        i = confirm("Enter yes press y to enter more array");
+        if(i==true){
+          cnt++;
+        }
+        }
+        else{
+          console.warn("data is empty");
+        }
+      }
+
+      function dataClear() {
+       document.getElementById("subject").value = "";
+       document.getElementById("question").value = "";
+       document.getElementById("answer").value = ""; 
+        // mainmarge()
+      }
+      var rohit=new Object();
+      var quiz=new Array();
+      function mainmarge() {
+        var counter=0;
+        main.push([subject,[question,answer]]);
+        
+        main=[];
+
+        counter++
+        console.log(main);
+        // var subject = new Array();
+        //  var subject=[];
+        // // var question = new Array();
+        //  var question=[];
+        // // var answer = new Array();
+        //  var answer=[];
+      }
+      function showQuiz() {
+          
+      }
+    </script>
+  </body>
+</html>
