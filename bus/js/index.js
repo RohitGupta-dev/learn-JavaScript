@@ -78,15 +78,11 @@ function display() {
     document.getElementById("male").value=maleVar.length;
     document.getElementById("female").value=femaleVAr.length;
     document.getElementById("empty").value=empty;
-  console.log("disabledVar Array");
-  console.log(disabledVar);
-  console.log("male array");
-  console.log(maleVar);
-  console.log("female Array");
-  console.log(femaleVAr);
+//   console.log("disabledVar Array");
+//   console.log(disabledVar);
+//   console.log("male array");
+//   console.log(maleVar);
+//   console.log("female Array");
+//   console.log(femaleVAr);
 }
 
-// .form-check-input:checked {
-//     background-color: #0d6efd;
-//     border-color: #0d6efd;
-// }
